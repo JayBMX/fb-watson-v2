@@ -1,0 +1,24 @@
+{
+  "name": "fb-watson-v2",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "license": "Apache",
+  "dependencies": {
+    "@cloudant/cloudant": "latest",
+    "body-parser": "^1.19.0",
+    "cfenv": "^1.2.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "ibm-watson": "^5.3.1",
+    "lodash": "^4.17.15"
+  }
+}

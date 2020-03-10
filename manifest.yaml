@@ -1,0 +1,7 @@
+---
+applications:
+  - name: fb-watson-v2
+    memory: 128M
+    buildpack: sdk-for-nodejs
+    
+
