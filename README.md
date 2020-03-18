@@ -42,7 +42,7 @@ Después de terminar este pattern usted entenderá como:
 
 ## Paso a Paso
 
-### 1. Clonar el repo
+### 1. Clonar o descargar el repo
 
 Clona el repositorio `fb-watson-v2` localmente. En una terminal, ejecuta:
 
@@ -52,17 +52,22 @@ $ git clone https://github.com/ricardonior29/fb-watson-v2
 
 ### 2. Crear el servicio Watson Assistant
 
-Crea un servicio de [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant).
-* Copia el API Key en las Credencials the Credentials y pégala en el archivo `params.json` en el valor `wa_api_key`
+Crea un servicio de Watson Assistant desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog).
 
-> Si el servicio es antiguo y aun usa _Basic Authentication_, copia el username y password en las Credenciales y pégalos en el archivo `params.json` en los valores `wa_username` y `wa_password`
+![](docs/1WatsonAssistantServices.png)
 
-* Haz click en el botón **Lanzar Herramienta** en la página principal del servicio.
-* Crea un nuevo Skill en el lenguaje preferido o importa el ejemplo en español [sample_workspace.json](sample_workspace.json) 
+* Copia la **clave de API** y el **URL** del apartado de credenciales y pégalos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`.
 
-> Para instrucciones detalladas en como desarrollar un asistente virtual sigue [El Instructivo para desarrollar Asistentes Virtuales](README_Skills.md)
+![](docs/2WACredentials.png)
 
-* Después de importar y/o desarrollar el asistente, abre los detalles **View API Details** del Skill, copia el **Workspace ID** y pégala en el archivo `params.json` en el valor `wa_workspace_id`
+* Haz click en el botón **Iniciar Watson Assistant** en la página principal del servicio.
+* Crea un nuevo Dialog Skill en el lenguaje preferido o importa el ejemplo en español [sample_skill.json](sample_skill.json) 
+
+![](docs/3CreateSkill.png)
+
+> Si quieres crear tu propio asistente virtual sigue [estas instrucciones detalladas](README_Skills.md)
+
+* Después de importar y/o desarrollar el asistente, abre los detalles **View API Details** del Skill, copia el **Assistand ID** y pégalo en el archivo `params.json` en el valor `wa_assistant_id`
 
 ![](docs/wa_api_detail.png)
 
