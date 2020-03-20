@@ -15,7 +15,7 @@ Después de terminar este pattern usted entenderá como:
 
 <img src="docs/architecture.png"
      alt="Architecture"
-     style="float: center; margin-right: 10px; margin-right: 10px;" />
+     style="float: center; margin-right: 40px; margin-left: 40px;" />
      
 ![](docs/architecture.png)
 
