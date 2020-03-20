@@ -14,7 +14,7 @@ Después de terminar este pattern usted entenderá como:
 * Crear y Desplegar una aplicación Cloud Foundry 
 
 <p align="center">
-  <img width="600" src="docs/architecture.png">
+  <img width="80%" src="docs/architecture.png">
 </p>
 
      
