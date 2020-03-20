@@ -13,9 +13,10 @@ Después de terminar este pattern usted entenderá como:
 * Usar Watson Visual Recognition
 * Crear y Desplegar una aplicación Cloud Foundry 
 
-img[src*="docs/architecture.png"] {
-   width:150px;
-}
+<p align="center">
+  <img width="460" height="300" src="docs/architecture.png">
+</p>
+
      
 ![](docs/architecture.png)
 
