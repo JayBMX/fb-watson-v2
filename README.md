@@ -1,13 +1,14 @@
-# Integración Watson APIs: Assistant v2 y Visual Recognition (Facebook Messenger)
+
+# Integración Watson APIs: Assistant v2 y Visual Recognition con Facebook Messenger
 > For english instructions click [English](README_EN.md)
 > 
 > Presentación [APIS de Watson](https://ibm.box.com/v/watson-apis-ppt)
 
-Esta aplicación demuestra una integración de las Watson APIs, conectando Facebook Messenger con Watson Assistant y Visual Recognition. Se desplegará en Cloud Foundry
+Esta aplicación demuestra una integración de las Watson APIs, conectando Facebook Messenger con Watson Assistant y Visual Recognition. Se desplegará en Cloud Foundry.
 
-Cloud Foundry Public provee un web endpoint, para ser llamado por Facebook Messenger a través de su Webhook. El mensaje es enviado a Watson Assistant para interactuar con un virtual agent, si el mensaje es una imagen es enviado a Watson Visual Recognition.
+Cloud Foundry Public provee un web endpoint, para ser llamado por Facebook Messenger a través de su Webhook. El mensaje es enviado a Watson Assistant para interactuar con un asistente virtual, si el mensaje es una imagen es enviado a Watson Visual Recognition.
 
-Después de terminar este pattern usted entenderá como: 
+Después de terminar este taller usted entenderá como: 
 
 * Usar Watson Assistant
 * Usar Watson Visual Recognition
@@ -24,7 +25,7 @@ Después de terminar este pattern usted entenderá como:
 2. Facebook Messenger envía el payload a través del CF Endpoint
 3. Se evalúa si el usuario tenía una sesión activa
 4. Se envía el mensaje de texto a Watson Assistant.
-5. Si es necesario la función enviaría una imagen adjunta a Watson Visual Recognition.
+5. Si es necesario, se envia una imagen adjunta a Watson Visual Recognition.
 6. Se envía la respuesta a Facebook Messenger
 7. El usuario obtiene la respuesta para su interacción.
 
@@ -47,7 +48,7 @@ Después de terminar este pattern usted entenderá como:
 
 ### 1. Clonar o descargar el repo
 
-Clona el repositorio `fb-watson-v2` localmente. En una terminal, ejecuta:
+Clone el repositorio `fb-watson-v2` localmente. Si es en una terminal, ejecute:
 
 ```
 $ git clone https://github.com/ricardonior29/fb-watson-v2
@@ -55,59 +56,94 @@ $ git clone https://github.com/ricardonior29/fb-watson-v2
 
 ### 2. Crear el servicio Watson Assistant
 
-Crea un servicio de Watson Assistant desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog).
+Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog):
 
-![](docs/1WatsonAssistantServices.png)
+![](docs/1-WatsonAssistantServices.png)
 
-* Copia la **clave de API** y el **URL** del apartado de credenciales y pégalos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`.
+* Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`:
 
-![](docs/2WACredentials.png)
+![](docs/2-WACredentials.png)
 
-* Haz click en el botón **Iniciar Watson Assistant** en la página principal del servicio.
-* Crea un nuevo Dialog Skill en el lenguaje preferido o importa el ejemplo en español [sample_skill.json](sample_skill.json) 
+* Click en el botón **Iniciar Watson Assistant** en la página principal del servicio y cree un nuevo asistente:
 
-![](docs/3CreateSkill.png)
+![](docs/3-CreateAssistant.png)
 
-> Si quieres crear tu propio asistente virtual sigue [estas instrucciones detalladas](README_Skills.md)
+* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [sample_skill.json]:(sample_skill.json) 
 
-* Después de importar y/o desarrollar el asistente, abre los detalles **View API Details** del Skill, copia el **Assistand ID** y pégalo en el archivo `params.json` en el valor `wa_assistant_id`
+![](docs/4-CreateSkill.png)
+![](docs/5-ImportSkill.png)
 
-![](docs/wa_api_detail.png)
+> Si quiere crear su propio asistente virtual siga [estas instrucciones detalladas](README_Skills.md)
 
-![](docs/wa_workspaceid.png)
+* Después de importar y/o desarrollar el asistente, vaya a **Settings**  en la esquina superior derecha del Asistente (No del Dialog Skill):
+
+![](docs/6-ViewCred.png)
+
+* En la sección de **API Details** copie el **Assistand ID** y péguelo en el archivo `params.json` en el valor `wa_assistant_id`:
+
+![](docs/7-GetCred.png)
 
 ### 3. Crear el servicio Watson Visual Recognition
 
-Crea un servicio de [Watson Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition).
-* Copia el API Key en las Credenciales y pégala en el archivo `params.json` en el valor `vr_api_key`
+Cree un servicio de Watson Visual Recognition desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog)
 
-> Sigue las instrucciones detalladas de como entrenar un modelo de clasificación en [El Instructivo para Custom Models](README_CM.md)
+* Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `vr_api_key` y `vr_url`
+* Click en el botón **Iniciar Watson Studio** en la página principal del servicio
+> Siga las instrucciones detalladas de como entrenar un modelo de clasificación de imagenes en [El Instructivo para Classify Images Model](README_CM.md)
 
 ### 4. Configurar Facebook Messenger
 
-* Crea un Fan Page en [Facebook](https://www.facebook.com/) como un Negocio o Local
-* Usa un nombre único y fácil de buscar para tu Fan Page
-* Si aun no la tienes, crea una cuenta en [Facebook Developers](https://developers.facebook.com/)
-* Agrega una aplicación
-* Agrega a la aplicación el producto **Messenger** haciendo click en Configurar
-* Una vez configurada ve a la sección **Generación de token**(o identificador) y selecciona el Fan Page (o Pagina) creada.
-* Copia el Token de acceso a la página que Facebook te entrega en el archivo `params.json` en el valor `fb_page_access_token`
-* En el archivo `params.json` en el valor `fb_verification_token` define una contraseña propia para tu aplicación.
+* Cree una Pagina en [Facebook](https://www.facebook.com/) como un Negocio o Marca.
+* Use un nombre único y fácil de buscar.
+* Si aun no la tiene, cree una cuenta en [Facebook Developers](https://developers.facebook.com/)
+* Agregue una aplicación:
+
+![](docs/8-CreateApp.png)
+
+* Agregue a la aplicación el producto **Messenger** haciendo click en Configurar:
+
+![](docs/9-Messenger.png)
+
+* Una vez configurada vaya a la sección **Tokens de acceso** y seleccione **Agregar o eliminar páginas**. Seleccione la página creada anteriormente.
+* Seleccione **Generar Token** y copie el Token de acceso a la página de Facebook. Péguelo en el archivo `params.json` en el valor `fb_page_access_token`
+* Finalmente, en el archivo `params.json` en el valor `fb_verification_token` defina una contraseña propia para su aplicación.
 
 ### 6. Desplegar a Cloud Foundry
-> Escoge un método de despliegue
 
-#### Desplegar a través de DevOps Toolchain
+#### 6.1 Instalar la CLI de IBM Cloud
 
-Haz click en el siguinte botón [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A//github.com/libardolara/fb-watson-toolchain) y sigue las [instrucciones para desplegar usando el toolchain](README-Deploy-Toolchain.md).
 
-También puedes desplegar directamente desde el CLI siguiendo los pasos de la siguiente sección.
+*  Utilice un navegador para acceder al repositorio oficial de GitHub [`ibm-cloud-cli-releases`](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/) y **seleccione** el instalador de su sistema operativo para comenzar la descarga. 
+    
+* Ejecute el instalador:
+    -   Para Mac y Windows™, ejecute el instalador.
+    -   Para Linux™, extraiga el paquete y ejecute el script `install`.
+    
+#### 6.2 Iniciar sesión en IBM Cloud
 
-#### Desplegar usando `cf push` 
-[Sigue la documentación](https://docs.cloudfoundry.org/devguide/deploy-apps/deploy-app.html).
-Este método despliega a Cloud Foundry con un comando usando el archivo manifest que especifica el ambiente de despliegue.
+>Para facilitar el inicio de sesión al CLI siga los siguientes pasos. O si desea ver más formas de iniciar sesión en la CLI siga [esta documentación](https://cloud.ibm.com/docs/iam/federated_id?topic=iam-federated_id&locale=es#federated_id)
 
-Asegúrate tener los parámetros correctos en el archivo `params.json`. Despliega a Cloud Functions usando `wskdeploy`. Esto usa el archivo `manifest.yaml` en la raíz del directorio.
+* Abra una terminal en su sistema operativo o en el IDE que este usando.
+* Especifique la opción `--sso` con el comando`ibmcloud login`.
+```
+$ ibmcloud login --sso
+```
+* Siga el URL en la solicitud para obtener un código de acceso de un solo uso.
+*   Copie y pegue el valor del código de acceso en la CLI como su entrada. (El código no será visible en la terminal).
+* La sesión habrá iniciado.
+* Para acceder a los servicios de Cloud Foundry especifique una organización y un espacio de Cloud Foundry. Puede ejecutar el siguiente comando para identificar la organización y el espacio de forma interactiva:
+```
+$ ibmcloud target --cf
+```
+O si conoce a qué organización y espacio pertenece el servicio, puede utilizar el siguiente comando:
+```
+$ ibmcloud target -o <value> -s <value>
+```
+> 
+#### 6.3 Desplegar 
+
+El siguiente método despliega a Cloud Foundry con un comando usando el archivo `manifest.yaml` (raíz del directorio) que especifica el ambiente de despliegue y nombre de la aplicación.
+Asegúrate tener los parámetros correctos en el archivo `params.json`. 
 
 ```
 $ ibmcloud cf push
@@ -115,6 +151,8 @@ $ ibmcloud cf push
 
 > Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`
 > Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`
+
+[Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 ### 7. Configurar el Webhook de Facebook Messenger
 
