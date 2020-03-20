@@ -13,6 +13,10 @@ Después de terminar este pattern usted entenderá como:
 * Usar Watson Visual Recognition
 * Crear y Desplegar una aplicación Cloud Foundry 
 
+<img src="docs/architecture.png"
+     alt="Architecture"
+     style="float: center; margin-right: 10px; margin-right: 10px;" />
+     
 ![](docs/architecture.png)
 
 ## Flujo
