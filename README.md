@@ -75,7 +75,7 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
   <img width="40%" src="docs/3-CreateAssistant.png">
 </p>
 
-* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [sample_skill.json]:(sample_skill.json) 
+* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [SegCarSkill.json]:(SegCarSkill.json) 
 
 <p align="left">
   <img width="65%" src="docs/4-CreateSkill.png">
@@ -118,7 +118,7 @@ Cree un servicio de Watson Visual Recognition desde el [catalogo de servicios de
 * Agregue una aplicación:
 
 <p align="left">
-  <img width="40%" src="docs/8-CreateApp.png">
+  <img width="35%" src="docs/8-CreateApp.png">
 </p>
 
 
