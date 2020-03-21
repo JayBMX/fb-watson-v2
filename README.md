@@ -72,23 +72,35 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
 * Click en el botón **Iniciar Watson Assistant** en la página principal del servicio y cree un nuevo asistente:
 
 <p align="left">
-  <img width="30%" src="docs/3-CreateAssistant.png">
+  <img width="40%" src="docs/3-CreateAssistant.png">
 </p>
 
 * Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [sample_skill.json]:(sample_skill.json) 
 
-![](docs/4-CreateSkill.png)
-![](docs/5-ImportSkill.png)
+<p align="left">
+  <img width="45%" src="docs/4-CreateSkill.png">
+</p>
+<p align="left">
+  <img width="45%" src="docs/5-ImportSkill.png">
+</p>
+
 
 > Si quiere crear su propio asistente virtual siga [estas instrucciones detalladas](README_Skills.md)
 
+
 * Después de importar y/o desarrollar el asistente, vaya a **Settings**  en la esquina superior derecha del Asistente (No del Dialog Skill):
 
-![](docs/6-ViewCred.png)
+<p align="left">
+  <img width="95%" src="docs/6-ViewCred.png">
+</p>
+
 
 * En la sección de **API Details** copie el **Assistand ID** y péguelo en el archivo `params.json` en el valor `wa_assistant_id`:
 
-![](docs/7-GetCred.png)
+<p align="left">
+  <img width="95%" src="docs/7-GetCred.png">
+</p>
+
 
 ### 3. Crear el servicio Watson Visual Recognition
 
@@ -105,11 +117,17 @@ Cree un servicio de Watson Visual Recognition desde el [catalogo de servicios de
 * Si aun no la tiene, cree una cuenta en [Facebook Developers](https://developers.facebook.com/)
 * Agregue una aplicación:
 
-![](docs/8-CreateApp.png)
+<p align="left">
+  <img width="40%" src="docs/8-CreateApp.png">
+</p>
+
 
 * Agregue a la aplicación el producto **Messenger** haciendo click en Configurar:
 
-![](docs/9-Messenger.png)
+<p align="left">
+  <img width="85%" src="docs/9-Messenger.png">
+</p>
+
 
 * Una vez configurada vaya a la sección **Tokens de acceso** y seleccione **Agregar o eliminar páginas**. Seleccione la página creada anteriormente.
 * Seleccione **Generar Token** y copie el Token de acceso a la página de Facebook. Péguelo en el archivo `params.json` en el valor `fb_page_access_token`
