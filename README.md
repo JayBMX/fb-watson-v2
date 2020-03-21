@@ -62,7 +62,10 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
 
 * Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`:
 
-![](docs/2-WACredentials.png)
+<p align="left">
+  <img width="85%" src="2-WACredentials.png">
+</p>
+
 
 * Click en el botón **Iniciar Watson Assistant** en la página principal del servicio y cree un nuevo asistente:
 
