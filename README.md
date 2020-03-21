@@ -129,7 +129,12 @@ Cree un servicio de Watson Visual Recognition desde el [catalogo de servicios de
 </p>
 
 
-* Una vez configurada vaya a la sección **Tokens de acceso** y seleccione **Agregar o eliminar páginas**. Seleccione la página creada anteriormente.
+* Una vez configurada vaya a la sección **Tokens de acceso** y seleccione **Agregar o eliminar páginas**. Seleccione la página creada anteriormente:
+
+<p align="left">
+  <img width="55%" src="docs/10-Page.png">
+</p>
+
 * Seleccione **Generar Token** y copie el Token de acceso a la página de Facebook. Péguelo en el archivo `params.json` en el valor `fb_page_access_token`
 * Finalmente, en el archivo `params.json` en el valor `fb_verification_token` defina una contraseña propia para su aplicación.
 
