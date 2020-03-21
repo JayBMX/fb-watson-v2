@@ -58,7 +58,9 @@ $ git clone https://github.com/ricardonior29/fb-watson-v2
 
 Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog):
 
-![](docs/1-WatsonAssistantServices.png)
+<p align="left">
+  <img width="90%" src="docs/1-WatsonAssistantServices.png">
+</p>
 
 * Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`:
 
@@ -70,7 +72,7 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
 * Click en el botón **Iniciar Watson Assistant** en la página principal del servicio y cree un nuevo asistente:
 
 <p align="left">
-  <img width="50%" src="docs/3-CreateAssistant.png">
+  <img width="30%" src="docs/3-CreateAssistant.png">
 </p>
 
 * Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [sample_skill.json]:(sample_skill.json) 
