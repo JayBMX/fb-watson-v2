@@ -182,7 +182,7 @@ $ ibmcloud cf push
 > Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`
 > Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`
 
-[Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
+Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 ### 7. Configurar el Webhook de Facebook Messenger
 
@@ -196,6 +196,6 @@ $ ibmcloud cf push
 * En _Select a page to subscribe your webhook to the page events_ suscribe la página que se creó.
 
 ### 8. Prueba del Asistente Virtual
-Buscar en la sección de mensajes la página e iniciar una conversación (desde la cuenta de la persona con la que se creó la página).
+Entra en la página de Facebook y selecciona probar botón de **Enviar mensaje**. Ya se puede iniciar una conversación (desde la cuenta de la persona con la que se creó la página).
 
-> Facebook Developer crea todas las aplicaciones por defecto como una aplicación de pruebas, si deseas publicar la aplicación para que cualquier persona pueda chatear con tu asistente virtual debes seguir los [procesos de revisión](https://developers.facebook.com/docs/apps/review/).
+> Facebook Developer crea todas las aplicaciones por defecto como una aplicación de pruebas, si desea publicar la aplicación para que cualquier persona pueda chatear con su asistente virtual debes seguir los [procesos de revisión](https://developers.facebook.com/docs/apps/review/).
