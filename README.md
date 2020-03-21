@@ -15,7 +15,7 @@ Después de terminar este taller usted entenderá como:
 * Crear y Desplegar una aplicación Cloud Foundry 
 
 <p align="center">
-  <img width="85%" src="docs/architecture.png">
+  <img width="65%" src="docs/architecture.png">
 </p>
 
 
