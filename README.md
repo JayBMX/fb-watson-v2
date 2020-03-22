@@ -173,7 +173,7 @@ $ ibmcloud target -o <value> -s <value>
 > 
 #### 6.3 Desplegar 
 
-**IMPORTANTE: Antes de desplegar cambie el nombre de la aplicación en el archivo `manifest.yaml` (raíz del directorio) por un nombre único y compruebe que el archivo `params.json` tenga los parametros correctos.**
+**IMPORTANTE: Antes de desplegar cambie el nombre de la aplicación en el archivo `manifest.yaml` (raíz del directorio) por un nombre único y compruebe que el archivo `params.json` tenga los parámetros correctos.**
 
 El siguiente método despliega a Cloud Foundry con un comando usando el archivo `manifest.yaml` que especifica el ambiente de despliegue y nombre de la aplicación.
 
@@ -182,6 +182,7 @@ $ ibmcloud cf push
 ```
 
 > Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`.
+
 > Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`.
 
 Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
