@@ -1,16 +1,17 @@
 # Crear un Skill para Watson Assistant
 
-Los Skills se agregan a tu asistente virtual, que dirige los problemas de los usuarios finales para proporcionar la respuesta adecuada. 
-Por lo cual un Skill es un conjuto especifica de habilidades que posee tu asistente virtual para resolver consultas/problemas de tus clientes.
+Una skill contiene los datos que Watson necesita para interactuar con el usuario de su aplicación. Watson analiza el contexto de la conversación y, a partir de esos datos, proporciona una respuesta útil al usuario.
+
+Las habilidades o skills constan de Intenciones, Entidades y Cuadros de dialogo. Para obtener más información consulte la documentación de IBM Watson(https://cloud.ibm.com/docs/services/assistant?topic=assistant-skills#planning-your-entities).
 
 ## Paso a Paso
 
 ### 1. Crear un Skill
 
-* En la pagina principal del servicio Watson Assistant, haz click en la pestaña **Skills**
-* Llena el campo **Name** con el nombre `Asistente de Seguros`
-* Selecciona el lenguage español
-* Haz click en el botón **Create dialog skill**
+* En la pagina principal del servicio Watson Assistant, haga click en la pestaña **Skills** y cree un **Dialog Skill*
+* Llene el campo **Name** con el nombre. Puede ser `Seg Car Skill`
+* Seleccione el lenguaje español
+* Haga click en el botón **Create dialog skill**
 
 ![](docs/wa_create_skill.png)
 
