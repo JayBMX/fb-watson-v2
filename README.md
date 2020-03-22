@@ -57,7 +57,7 @@ $ git clone https://github.com/ricardonior29/fb-watson-v2
 
 ### 2. Crear el servicio Watson Assistant
 
-Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog):
+Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog):
 
 <p align="left">
   <img width="95%" src="docs/1-WatsonAssistantServices.png">
@@ -105,7 +105,7 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
 
 ### 3. Crear el servicio Watson Visual Recognition
 
-Cree un servicio de Watson Visual Recognition desde el [catalogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog)
+Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog)
 
 * Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `vr_api_key` y `vr_url`
 * Click en el botón **Iniciar Watson Studio** en la página principal del servicio
