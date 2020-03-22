@@ -173,20 +173,28 @@ $ ibmcloud target -o <value> -s <value>
 > 
 #### 6.3 Desplegar 
 
-El siguiente método despliega a Cloud Foundry con un comando usando el archivo `manifest.yaml` (raíz del directorio) que especifica el ambiente de despliegue y nombre de la aplicación.
-Asegúrate tener los parámetros correctos en el archivo `params.json`. 
+**IMPORTANTE: Antes de desplegar cambie el nombre de la aplicación en el archivo `manifest.yaml` (raíz del directorio) por un nombre único y compruebe que el archivo `params.json` tenga los parametros correctos.**
+
+El siguiente método despliega a Cloud Foundry con un comando usando el archivo `manifest.yaml` que especifica el ambiente de despliegue y nombre de la aplicación.
 
 ```
 $ ibmcloud cf push
 ```
 
-> Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`
-> Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`
+> Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`.
+> Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`.
 
 Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 ### 7. Configurar el Webhook de Facebook Messenger
 
+* Una vez desplegada la aplicación en Cloud Foundry vaya al [Panel de Control de IBM Cloud](https://cloud.ibm.com/), entre a **Apps de Cloud Foundry** y seleccione la aplicación.
+
+<p align="left">
+  <img width="80%" src="Docs/Capturas/11-CFApps.png">
+</p>
+
+* Abra
 * Copia el Endpoint público de la app desplegada en Cloud Foundry
 * En el sitio de la aplicación de Facebook Messenger ve a la sección **Webhooks**
 * Haz click en **Configurar Webhook**
