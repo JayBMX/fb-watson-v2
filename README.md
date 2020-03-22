@@ -43,7 +43,7 @@ Después de terminar este taller usted entenderá como:
 ## Prerrequisitos
 
 * Tener una cuenta en [IBM Cloud](https://cloud.ibm.com/registration).
-* Tener instalado un IDE (Entorno de desarrollo integrado) como [Visual Studio Code](https://code.visualstudio.com/).
+* Tener instalado un IDE (Entorno de desarrollo integrado) como [Visual Studio Code](https://code.visualstudio.com/) u otro.
 
 ## Paso a Paso
 
@@ -76,7 +76,7 @@ Cree un servicio de Watson Assistant desde el [catalogo de servicios de IBM Clou
   <img width="40%" src="docs/3-CreateAssistant.png">
 </p>
 
-* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [SegCarSkill.json]:(SegCarSkill.json) 
+* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [segCar_skill.json](segCar_skill.json) 
 
 <p align="left">
   <img width="65%" src="docs/4-CreateSkill.png">
