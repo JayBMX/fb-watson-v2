@@ -1,8 +1,6 @@
 
 # Integración Watson APIs: Assistant v2 y Visual Recognition con Facebook Messenger
 > For english instructions click [English](README_EN.md)
-> 
-> Presentación [APIS de Watson](https://ibm.box.com/v/watson-apis-ppt)
 
 Esta aplicación demuestra una integración de las Watson APIs, conectando Facebook Messenger con Watson Assistant y Visual Recognition. Se desplegará en Cloud Foundry.
 
@@ -21,12 +19,12 @@ Después de terminar este taller usted entenderá como:
 
 ## Flujo
 
-1. El usuario interactúa con Facebook Messenger
-2. Facebook Messenger envía el payload a través del CF Endpoint
-3. Se evalúa si el usuario tenía una sesión activa
+1. El usuario interactúa con Facebook Messenger.
+2. Facebook Messenger envía el payload a través del CF Endpoint.
+3. Se evalúa si el usuario tenía una sesión activa.
 4. Se envía el mensaje de texto a Watson Assistant.
 5. Si es necesario, se envia una imagen adjunta a Watson Visual Recognition.
-6. Se envía la respuesta a Facebook Messenger
+6. Se envía la respuesta a Facebook Messenger.
 7. El usuario obtiene la respuesta para su interacción.
 
 ## Componentes Incluidos
@@ -76,7 +74,7 @@ Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Clo
   <img width="40%" src="docs/Capturas/3-CreateAssistant.png">
 </p>
 
-* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [segCar_skill.json](segCar_skill.json) 
+* Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [segCar_skill.json](docs/segCar_skill.json) 
 
 <p align="left">
   <img width="65%" src="docs/Capturas/4-CreateSkill.png">
@@ -86,7 +84,7 @@ Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Clo
 </p>
 
 
-> Si quiere crear su propio asistente virtual siga [estas instrucciones detalladas](README_Skills.md)
+> Si quiere crear su propio asistente virtual siga [estas instrucciones detalladas](README_WA.md)
 
 
 * Después de importar y/o desarrollar el asistente, vaya a **Settings**  en la esquina superior derecha del Asistente (No del Dialog Skill):
@@ -105,11 +103,12 @@ Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Clo
 
 ### 3. Crear el servicio Watson Visual Recognition
 
-Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog)
+Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog).
 
-* Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `vr_api_key` y `vr_url`
-* Click en el botón **Iniciar Watson Studio** en la página principal del servicio
-> Siga las instrucciones detalladas de como entrenar un modelo de clasificación de imagenes en [El Instructivo para Classify Images Model](README_CM.md)
+* Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `vr_api_key` y `vr_url`.
+* Click en el botón **Iniciar Watson Studio** en la página principal del servicio.
+
+> Siga las instrucciones detalladas de como entrenar un modelo de clasificación de imagenes en [El Instructivo para Classify Images Model](README_VR.md)
 
 ### 4. Configurar Facebook Messenger
 
@@ -182,7 +181,7 @@ $ ibmcloud cf push
 ```
 
 > Si quieres ver los logs en consola `ibmcloud cf logs app-name --recent`.
-
+>
 > Si quieres deshacer el despliegue puedes usar `ibmcloud cf delete app-name`.
 
 Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
