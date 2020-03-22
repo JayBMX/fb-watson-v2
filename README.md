@@ -15,7 +15,7 @@ Después de terminar este taller usted entenderá como:
 * Crear y Desplegar una aplicación Cloud Foundry 
 
 <p align="center">
-  <img width="80%" src="docs/architecture.png">
+  <img width="80%" src="Docs/Capturas/architecture.png">
 </p>
 
 
@@ -60,29 +60,29 @@ $ git clone https://github.com/ricardonior29/fb-watson-v2
 Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Cloud](https://cloud.ibm.com/catalog):
 
 <p align="left">
-  <img width="95%" src="docs/1-WatsonAssistantServices.png">
+  <img width="95%" src="Docs/Capturas/1-WatsonAssistantServices.png">
 </p>
 
 * Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `wa_api_key` y `wa_url`:
 
 <p align="left">
-  <img width="90%" src="docs/2-WACredentials.png">
+  <img width="90%" src="Docs/Capturas/2-WACredentials.png">
 </p>
 
 
 * Click en el botón **Iniciar Watson Assistant** en la página principal del servicio y cree un nuevo asistente:
 
 <p align="left">
-  <img width="40%" src="docs/3-CreateAssistant.png">
+  <img width="40%" src="Docs/Capturas/3-CreateAssistant.png">
 </p>
 
 * Cree un nuevo Dialog Skill en el lenguaje preferido o importe el ejemplo en español [segCar_skill.json](segCar_skill.json) 
 
 <p align="left">
-  <img width="65%" src="docs/4-CreateSkill.png">
+  <img width="65%" src="Docs/Capturas/4-CreateSkill.png">
 </p>
 <p align="left">
-  <img width="65%" src="docs/5-ImportSkill.png">
+  <img width="65%" src="Docs/Capturas/5-ImportSkill.png">
 </p>
 
 
@@ -92,14 +92,14 @@ Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Clo
 * Después de importar y/o desarrollar el asistente, vaya a **Settings**  en la esquina superior derecha del Asistente (No del Dialog Skill):
 
 <p align="left">
-  <img width="95%" src="docs/6-ViewCred.png">
+  <img width="95%" src="Docs/Capturas/6-ViewCred.png">
 </p>
 
 
 * En la sección de **API Details** copie el **Assistand ID** y péguelo en el archivo `params.json` en el valor `wa_assistant_id`:
 
 <p align="left">
-  <img width="95%" src="docs/7-GetCred.png">
+  <img width="95%" src="Docs/Capturas/7-GetCred.png">
 </p>
 
 
@@ -119,21 +119,21 @@ Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios d
 * Agregue una aplicación:
 
 <p align="left">
-  <img width="35%" src="docs/8-CreateApp.png">
+  <img width="35%" src="Docs/Capturas/8-CreateApp.png">
 </p>
 
 
 * Agregue a la aplicación el producto **Messenger** haciendo click en Configurar:
 
 <p align="left">
-  <img width="85%" src="docs/9-Messenger.png">
+  <img width="85%" src="Docs/Capturas/9-Messenger.png">
 </p>
 
 
 * Una vez configurada vaya a la sección **Tokens de acceso** y seleccione **Agregar o eliminar páginas**. Seleccione la página creada anteriormente:
 
 <p align="left">
-  <img width="75%" src="docs/10-Page.png">
+  <img width="75%" src="Docs/Capturas/10-Page.png">
 </p>
 
 * Seleccione **Generar Token** y copie el Token de acceso a la página de Facebook. Péguelo en el archivo `params.json` en el valor `fb_page_access_token`
