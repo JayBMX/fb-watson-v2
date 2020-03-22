@@ -84,7 +84,7 @@ Cree un servicio de Watson Assistant desde el [catálogo de servicios de IBM Clo
 </p>
 
 
-> Si quiere crear su propio asistente virtual siga [estas instrucciones detalladas](README_WA.md)
+> Si quiere crear su propio asistente virtual siga el [Instructivo para crear un Skill](README_WA.md).
 
 
 * Después de importar y/o desarrollar el asistente, vaya a **Settings**  en la esquina superior derecha del Asistente (No del Dialog Skill):
@@ -108,7 +108,7 @@ Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios d
 * Copie la **clave de API** y el **URL** del apartado de credenciales y péguelos en el archivo `params.json` en los valores `vr_api_key` y `vr_url`.
 * Click en el botón **Iniciar Watson Studio** en la página principal del servicio.
 
-> Siga las instrucciones detalladas de como entrenar un modelo de clasificación de imagenes en [El Instructivo para Classify Images Model](README_VR.md)
+> Siga las instrucciones detalladas de como entrenar un modelo de clasificación de imágenes en el [Instructivo para Modelo de Clasificación](README_VR.md).
 
 ### 4. Configurar Facebook Messenger
 
