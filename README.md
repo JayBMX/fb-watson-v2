@@ -113,7 +113,7 @@ Cree un servicio de Watson Visual Recognition desde el [catálogo de servicios d
 
 ### 4. Configurar Facebook Messenger
 
-* Cree una Pagina en [Facebook](https://www.facebook.com/) como un Negocio o Marca.
+* Cree una Página en [Facebook](https://www.facebook.com/) como un Negocio o Marca.
 * Use un nombre único y fácil de buscar.
 * Si aun no la tiene, cree una cuenta en [Facebook Developers](https://developers.facebook.com/)
 * Agregue una aplicación:
@@ -201,15 +201,33 @@ Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org
   <img width="90%" src="docs/Capturas/12-AppRoute.png">
 </p>
 
-* En el sitio de la aplicación de Facebook Messenger ve a la sección **Webhooks**
-* Haz click en **Configurar Webhook**
-* En el panel desplegable, pega el Endpoint de tu función. Modifica la extensión de la url, añadiendo al final de la dirección `/webhook`
-* En el campo _Verificar Token_ ingresa la contraseña que definiste en el valor de `fb_verification_token` del archivo `params.json`
-* En los _Campos de Suscripción_ selecciona la opción **messages**
-* Crea el Webhook.
-* En _Select a page to subscribe your webhook to the page events_ suscribe la página que se creó.
+* Vuelva a Facebook Developers y en el sitio de la aplicación de Facebook Messenger vaya a la sección **Webhooks**:
+
+<p align="left">
+  <img width="85%" src="docs/Capturas/13-Webhooks.png">
+</p>
+
+* Haga click en **Agregar URL...**
+* En el panel desplegable, pegue la ruta de la aplicación. Modifiquela añadiendo al final `/webhook`
+
+<p align="left">
+  <img width="85%" src="docs/Capturas/14-WebhookConfig.png">
+</p>
+
+* En el campo **Token de verificación** ingrese la contraseña que definió en el valor de `fb_verification_token` del archivo `params.json`
+* Haga click en el botón **Verificar y guardar**. (Facebook Messenger envía una solicitud `GET` al webhook con el token en el parámetro `hub.verify` de la cadena de consulta). 
+* Agregue la página de Facebook al Webhook y haga click en el botón **Editar**:
+
+<p align="left">
+  <img width="90%" src="docs/Capturas/15-EditWebhook.png">
+</p>
+
+* Seleccione los _campos de suscripción_ **messages** y **messaging_postbacks**.
+* Guarde el Webhook.
+
+> Siga la documentación de [Facebook Webhooks](https://developers.facebook.com/docs/messenger-platform/getting-started/webhook-setup?locale=es_LA)
 
 ### 8. Prueba del Asistente Virtual
-Entra en la página de Facebook y selecciona probar botón de **Enviar mensaje**. Ya se puede iniciar una conversación (desde la cuenta de la persona con la que se creó la página).
+Entre en la página de Facebook y seleccione probar botón de **Enviar mensaje**. Ya se puede iniciar una conversación (desde la cuenta de la persona con la que se creó la página).
 
 > Facebook Developer crea todas las aplicaciones por defecto como una aplicación de pruebas, si desea publicar la aplicación para que cualquier persona pueda chatear con su asistente virtual debes seguir los [procesos de revisión](https://developers.facebook.com/docs/apps/review/).
