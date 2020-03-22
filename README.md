@@ -42,7 +42,8 @@ Después de terminar este taller usted entenderá como:
 
 ## Prerrequisitos
 
-* [Cloud Foundry CLI commands](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps&locale=es#dep_apps)   IBM Cloud proporciona paquetes de compilación que admiten Java y Node.js, entre otros. Si está utilizando estos lenguajes y marcos, no necesita especificar el paquete de compilación cuando implemente su aplicación utilizando la interfaz de línea de comandos. Debido a que IBM Cloud está construido en Cloud Foundry, el comando está predeterminado en estos paquetes de compilación.
+* Tener una cuenta en [IBM Cloud](https://cloud.ibm.com/registration).
+* Tener instalado un IDE (Entorno de desarrollo integrado) como [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Paso a Paso
 
