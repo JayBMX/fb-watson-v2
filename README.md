@@ -198,7 +198,7 @@ Documentación: [Desplegar usando el App Manifest](https://docs.cloudfoundry.org
 * Copie el Endpoint público de la app desplegada en Cloud Foundry:
 
 <p align="left">
-  <img width="80%" src="docs/Capturas/12-AppRoute.png">
+  <img width="90%" src="docs/Capturas/12-AppRoute.png">
 </p>
 
 * En el sitio de la aplicación de Facebook Messenger ve a la sección **Webhooks**
